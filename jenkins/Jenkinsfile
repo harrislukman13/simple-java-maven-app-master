@@ -18,11 +18,10 @@ pipeline {
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
-                }
-                recordIssues(
-                    enabledForFailure: true, aggregatingResults: true,
-                    tools:[java(), spotBugs(pattern: '**/spotbugsXml.xml', reportEncoding: 'UTF-8')]
-                )
+                    recordIssues enabledForFailure: true, tools: [mavenConsole(), java(), javaDoc()]
+                    recordIssues enabledForFailure: true, tool: spotBugs()
+                }     
+                
             }
         }
         stage('Deliver') {
