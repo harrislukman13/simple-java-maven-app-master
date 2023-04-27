@@ -11,9 +11,14 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(MESSAGE);
+
+        if(MESSAGE == "Hello World!"){
+            System.out.println(true);
+        }
     }
 
     public String getMessage() {
         return MESSAGE;
     }
+
 }
