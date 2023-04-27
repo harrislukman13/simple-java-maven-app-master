@@ -19,7 +19,7 @@ pipeline {
                 always {
                     junit 'target/surefire-reports/*.xml'
                     recordIssues enabledForFailure: true, tools: [mavenConsole(), java(), javaDoc()]
-                    recordIssues enabledForFailure: true, tool: spotBugs()
+                    recordIssues enabledForFailure: true, tool: spotBugs(pattern: '**/spotbugsXml.xml')
                 }     
                 
             }
