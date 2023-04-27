@@ -36,8 +36,7 @@
             <artifactId>spotbugs-maven-plugin</artifactId>
             <version>4.7.3.4</version>
              <configuration>
-                <includeFilterFile>spotbugs-security-include.xml</includeFilterFile>
-                <excludeFilterFile>spotbugs-security-exclude.xml</excludeFilterFile>
+                <excludeFilterFile>excludesFilter.xml</excludeFilterFile>
                 <plugins>
                     <plugin>
                         <groupId>com.h3xstream.findsecbugs</groupId>
