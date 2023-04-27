@@ -17,6 +17,8 @@
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spotbugs.effort>Max</spotbugs.effort>
+    <spotbugs.threshold>Low</spotbugs.threshold>
   </properties>
   <build>
     <pluginManagement>
@@ -26,6 +28,13 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.11.0</version>
         </plugin>
+        <plugins>
+      <plugin>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
+        <version>4.7.3.4</version>
+      </plugin>
+    </plugins> 
       </plugins>
     </pluginManagement>
     <plugins>
